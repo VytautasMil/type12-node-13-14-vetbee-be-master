@@ -1,0 +1,27 @@
+#### ALL PETS
+GET http://localhost:3000/api/v1/pets/
+
+#### PETS DELETE
+DELETE http://localhost:3000/api/v1/pets/5
+
+#### PETS CREATE
+POST http://localhost:3000/api/v1/pets/
+Content-Type: application/json
+
+{
+  "name": "To",
+  "dob": "2008-07-07",
+  "client_email": "Bomb@pukuotukas"
+}
+
+#### MEDS ALL
+GET http://localhost:3000/api/v1/meds/
+
+#### MEDS CREATE
+POST http://localhost:3000/api/v1/meds/
+Content-Type: application/json
+
+{
+  "name": "XANAX",
+  "description": "Does somenthing"
+}
