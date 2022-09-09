@@ -1,5 +1,6 @@
 const express = require('express');
 const { medsIndex, medsCreate } = require('../model/medsModel');
+const { checkMedsBody } = require('../utils/middleware');
 
 const medsRouter = express.Router();
 
@@ -14,10 +15,10 @@ medsRouter
       res.status(500).json({ msg: 'Some things dont works' });
     }
   })
-  .post(async (req, res) => {
+  .post(checkMedsBody, async (req, res) => {
     try {
       const { name, description } = req.body;
-      if (!name || !description) throw new Error('no name or description');
+      // if (!name || !description) throw new Error('no name or description');
       const createMedSuccess = await medsCreate(name, description);
       // if (createMedSuccess) {
       //   res.status(201).json({ msg: 'med created' });

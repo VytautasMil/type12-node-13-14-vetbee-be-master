@@ -22,6 +22,6 @@ POST http://localhost:3000/api/v1/meds/
 Content-Type: application/json
 
 {
-  "name": "XANAX",
-  "description": "Does somenthing"
+  "name": "Ib",
+  "description": "Pain"
 }
